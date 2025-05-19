@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP DEMO | HOME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <h1>Welcome Home!</h1>
+    <p>You have successfully signed in.</p>
+  </div>  
+
+  <div style="text-align: center; margin-top: 20px;" id="buttonContainer">
+    <button id="expandButton" class="btn">Open Detailed Section</button>
+  </div>
+
+  <div id="detailedSection" style="display: none;">
+    <div class="form-header">
+      <label>Organization: <input type="text" class="short-input"><input type="text"></label>
+      <label>Item: <input type="text" value="151X1320EA015G01"></label>
+      <label>Description: <input type="text" value="ACCESS PANEL BRACKET"></label>
+    </div>
+
+    <div class="radio-group">
+      <span>Display Attributes:</span>
+      <label><input type="radio" name="display" checked> Master</label>
+      <label><input type="radio" name="display"> Org</label>
+      <label><input type="radio" name="display"> Etc</label>
+    </div>
+
+    <div class="tabs">
+      <button class="tab" data-tab="leadTime">Lead Times</button>
+      <button class="tab" data-tab="wip">Work in Process</button>
+      <button class="tab" data-tab="order">Order Management</button>
+      <button class="tab" data-tab="invoice">Invoicing</button>
+      <button class="tab" data-tab="process">Process Manufacturing</button>
+      <button class="tab" data-tab="service">Service</button>
+      <button class="tab" data-tab="web">Web Option</button>
+    </div>
+
+    <div id="formsContainer">
+
+      <form id="leadTimeForm" class="tab-form">
+        <h3>Lead Times</h3>
+        <input type="number" name="preprocessing" placeholder="Preprocessing">
+        <input type="number" name="processing" placeholder="Processing">
+        <input type="number" name="postprocessing" placeholder="Postprocessing">
+        <input type="number" name="fixed" placeholder="Fixed">
+        <input type="number" name="variable" placeholder="Variable">
+        <input type="number" name="cumulative_manufacturing" placeholder="Cumulative Manufacturing">
+        <input type="number" name="cumulative_total" placeholder="Cumulative Total">
+        <input type="number" name="lead_time_lot_size" placeholder="Lead Time Lot Size">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="wipForm" class="tab-form" style="display: none;">
+        <h3>Work in Process</h3>
+        <input type="text" name="routing" placeholder="Routing Name">
+        <input type="text" name="operation" placeholder="Operation Seq">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="orderForm" class="tab-form" style="display: none;">
+        <h3>Order Management</h3>
+        <input type="text" name="order_type" placeholder="Order Type">
+        <input type="text" name="default_warehouse" placeholder="Default Warehouse">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="invoiceForm" class="tab-form" style="display: none;">
+        <h3>Invoicing</h3>
+        <input type="text" name="invoice_group" placeholder="Invoice Group">
+        <input type="date" name="last_invoice_date">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="processForm" class="tab-form" style="display: none;">
+        <h3>Process Manufacturing</h3>
+        <input type="text" name="batch_size" placeholder="Batch Size">
+        <input type="text" name="yield_percentage" placeholder="Yield %">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="serviceForm" class="tab-form" style="display: none;">
+        <h3>Service</h3>
+        <input type="text" name="service_code" placeholder="Service Code">
+        <input type="text" name="duration" placeholder="Estimated Duration">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <form id="webForm" class="tab-form" style="display: none;">
+        <h3>Web Option</h3>
+        <input type="text" name="web_visibility" placeholder="Visibility">
+        <input type="text" name="seo_tag" placeholder="SEO Tag">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+    </div>
+
+    <!-- <form id="leadTimeForm">
+      <input type="number" name="preprocessing" placeholder="Preprocessing" value="6">
+      <input type="number" name="processing" placeholder="Processing">
+      <input type="number" name="postprocessing" placeholder="Postprocessing" value="2">
+      <input type="number" name="fixed" placeholder="Fixed">
+      <input type="number" name="variable" placeholder="Variable">
+      <input type="number" name="cumulative_manufacturing" placeholder="Cumulative Manufacturing">
+      <input type="number" name="cumulative_total" placeholder="Cumulative Total">
+      <input type="number" name="lead_time_lot_size" placeholder="Lead Time Lot Size" value="1">
+      <button type="submit" class="btn">Submit</button>
+    </form> -->
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="backButton" class="btn">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
